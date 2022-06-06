@@ -1,0 +1,67 @@
+.main-container {
+  margin: auto 3rem;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  accent-color: #008294;
+}
+
+.custom-checkbox__item {
+  width: 23px;
+  height: 23px;
+}
+
+/* :::::::::::::::::::::: Main colors :::::::::::::::::::::::: */
+.primary-color {
+  color: #8bc340;
+}
+
+.secondary-color {
+  color: #008294;
+}
+
+/* :::::::::::::::::::::: shadow :::::::::::::::::::::::::::: */
+.container-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* ::::::::::::::::: font-size ::::::::::::::::::::::::::::: */
+.fontSize-1x {
+  font-size: 1rem; /* 16px */
+}
+.fontSize-medium {
+  font-size: 1.38rem !important; /* 22px */
+}
+
+/* ::::::::::::::::: Border radius :::::::::::::::::::::::::: */
+.radius-lg {
+  border-radius: 10px !important;
+}
+
+/* ::::::::::::::::: Buttons :::::::::::::::::::::::::: */
+.btn-primary-outline {
+  border: 2px solid #008294;
+  border-radius: 10px;
+  color: #008294;
+  font-weight: bold;
+}
+.btn-primary-fill {
+  border: 2px solid #008294;
+  background-color: #008294;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+.btn-primary-fill:hover {
+  color: black;
+}
+
+@media only screen and (max-width: 980px) {
+  .home-card-container {
+    margin: auto 3rem;
+  }
+
+  .main-container {
+    margin: auto 1rem;
+  }
+}

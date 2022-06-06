@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add/Modify Facility</title>
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="css/slick.min.css" />
+    <link rel="stylesheet" href="css/slick-theme.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/km-revamp.css" />
+    <link rel="stylesheet" href="./css/add-certificate.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+
+  <body style="background-color: #f1f5f6">
+    <section>
+      <div
+        class="d-flex align-items-center bg-white mt-5 box-shadow container-shadow p-4 border-bottom"
+      >
+        <a href="./new-provider.html" class="back-btn mr-5">
+          <img src="./images/back-icon.svg" alt="back button icon" />
+          Back
+        </a>
+        <h3>Add Certificate</h3>
+      </div>
+
+      <div
+        class="main-container mt-5 text-right bg-white radius-lg container-shadow p-5"
+      >
+        <a href="./new-facility-added.html" class="btn btn-primary-outline mb-4"
+          >Add Certificate</a
+        >
+        <div id="main-table">
+          <table class="table table-striped add-modify-table mt-2">
+            <thead>
+              <tr class="text-center">
+                <td scope="col">Is applicable ?</td>
+                <td scope="col"># #</td>
+                <td scope="col">Issue Date</td>
+                <td scope="col">Expiry Date</td>
+                <td scope="col">Certificate Validity in year(s)</td>
+                <td scope="col">Validity Date</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center">
+                <td scope="row">
+                        <div class="container-check top-space-lg bot-space-lg ml-4">
+                        <div class="checkbox-sm"><input id="Module1" checked="true" disabled="true" type="checkbox"><label for="Module1"></label></div>
+                </td>
+                <td class="text-left">2022 Mandatory Education</td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    01/01/2022
+                </td>
+                <td class="px-3 py-2">
+                  31/12/2022
+                </td>
+                <td class="px-3 py-2">
+                  1
+                </td>
+                <td class="px-3 py-2 secondary-color"></td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                        <div class="container-check top-space-lg bot-space-lg ml-4">
+                        <div class="checkbox-sm"><input id="Module2" type="checkbox"><label for="Module2"></label></div>
+                </td>
+                <td class="text-left">License</td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color">Expire in 1095 days</td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                        <div class="container-check top-space-lg bot-space-lg ml-4">
+                        <div class="checkbox-sm"><input id="Module3" type="checkbox"><label for="Module3"></label></div>
+                </td>
+                <td class="text-left">BLS</td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color">Expire in 1095 days</td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                        <div class="container-check top-space-lg bot-space-lg ml-4">
+                        <div class="checkbox-sm"><input id="Module4" type="checkbox"><label for="Module4"></label></div>
+                </td>
+                <td class="text-left">ACLS</td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color">Expire in 1095 days</td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                        <div class="container-check top-space-lg bot-space-lg ml-4">
+                        <div class="checkbox-sm"><input id="Module5" type="checkbox"><label for="Module5"></label></div>
+                </td>
+                <td class="text-left">PALS</td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color">Expire in 1095 days</td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                        <div class="container-check top-space-lg bot-space-lg ml-4">
+                        <div class="checkbox-sm"><input id="Module6" type="checkbox"><label for="Module6"></label></div>
+                </td>
+                <td class="text-left">NRP</td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color">Expire in 1095 days</td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                </td>
+                <td class="text-left">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control radius-lg" id="provider-name" placeholder="Enter Certificate">
+                      </div>
+                </td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color"></td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                </td>
+                <td class="text-left">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control radius-lg" id="provider-name" placeholder="Enter Certificate">
+                      </div>
+                </td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color"></td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                </td>
+                <td class="text-left">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control radius-lg" id="provider-name" placeholder="Enter Certificate">
+                      </div>
+                </td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color"></td>
+              </tr>
+
+              <tr class="text-center">
+                <td scope="row">
+                </td>
+                <td class="text-left">
+                    <div class="form-group mb-0">
+                        <input type="text" class="form-control radius-lg" id="provider-name" placeholder="Enter Certificate">
+                      </div>
+                </td>
+                <td class="px-2 py-0">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="date"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2">
+                  <div class="form-group m-auto">
+                    <input
+                      type="text"
+                      class="form-control radius-lg"
+                      id="joining-date"
+                      placeholder="Ex: 1, 2 or 3"
+                    />
+                  </div>
+                </td>
+                <td class="px-3 py-2 secondary-color"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-5 text-left">
+          <a
+            href="./new-certificate-added.html"
+            class="btn btn-primary-fill px-5 py-2"
+            >Add Facility</a
+          >
+          <button class="btn-primary-outline ml-3 px-5 py-2">Exit</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

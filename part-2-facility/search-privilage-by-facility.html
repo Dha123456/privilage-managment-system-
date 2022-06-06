@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MYDHA Project</title>
+    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="stylesheet" href="../css/slick.min.css">
+    <link rel="stylesheet" href="../css/slick-theme.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/km-revamp.css">
+    <link rel="stylesheet" href="./css/search-settings-common.css">
+    <link rel="stylesheet" href="../css/common.css">
+
+    <script src="chart/Chart.min.js"></script>
+    <script src="chart/utils.js"></script>
+    <style>
+        .shortcut-sidebar .side-navbar {
+            padding: 130px 0;
+        }
+
+        /* start */
+
+        .main-menu nav.navbar {
+            top: 81px;
+        }
+
+        /* end */
+
+        .header {
+            min-height: 80px;
+        }
+
+        /* start */
+
+        .myribbon {
+            width: 100%;
+            position: fixed;
+            top: 121px;
+            background: #fff;
+        }
+
+        @font-face {
+            font-family: 'ShellIcons';
+            src: url("/_layouts/15/fonts/shellicons.eot");
+            src: url("/_layouts/15/fonts/shellicons.eot?#iefix") format('embedded-opentype'), url("/_layouts/15/fonts/shellicons.woff") format('woff'), url("/_layouts/15/fonts/shellicons.ttf") format('truetype'), url("/_layouts/15/fonts/shellicons.svg") format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .wf-family-o365 {
+            font-family: 'ShellIcons';
+        }
+
+        .wf-o365-gear:before {
+            content: '\e035';
+        }
+
+        /* end */
+        /* start */
+
+        .carousel-custom .carousel-inner {
+            background: url('images/bg-banner.png');
+        }
+
+        .carousel-custom .carousel-inner img {
+            width: auto !important;
+            height: 275px !important;
+            text-align: center !important;
+        }
+
+        .carousel-custom .carousel-item a {
+            text-align: center;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .carousel-custom>.carousel-item {
+            transition-property: opacity;
+        }
+
+        .carousel-custom.carousel-inner>.carousel-item,
+        .carousel-custom.carousel-inner>.active>.left,
+        .carousel-custom.carousel-inner>.active>.right {
+            opacity: 0;
+        }
+
+        .carousel-custom>.carousel-inner>.active,
+        .carousel-custom>.carousel-inner>.next>.left,
+        .carousel-custom>.carousel-inner>.prev>.right {
+            opacity: 1;
+        }
+
+        .carousel-custom>.carousel-inner>.next,
+        .carousel-custom>.carousel-inner>.prev,
+        .carousel-custom>.carousel-inner>.active>.left,
+        .carousel-custom>.carousel-inner>.active>.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .carousel-custom>.carousel-inner>.carousel-control {
+            z-index: 2;
+        }
+
+        .mCustomScrollbar {
+            margin: 10px 0 0;
+            overflow: auto;
+            position: static;
+            text-align: left;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .mCustomScrollbar li {
+            background-color: transparent !important;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            display: inline-block;
+            height: auto;
+            margin: 0 !important;
+            width: auto;
+        }
+
+        .mCustomScrollbar li:last-child {
+            text-indent: 0 !important;
+            vertical-align: middle !important;
+            line-height: 60px;
+            background: none !important;
+            height: auto;
+            margin: 0 !important;
+            width: auto;
+        }
+
+        .mCustomScrollbar li:last-child a:hover {
+            color: #0c8b95;
+            text-decoration: none;
+        }
+
+        .mCustomScrollbar li img {
+            display: block;
+            opacity: .9;
+            width: 130px;
+            width: auto;
+            height: 60px;
+            /* padding: 6px; */
+            border: 1px solid #ccc;
+            margin: 3px;
+        }
+
+        @media screen and (min-width:1024px) and (max-width:1440px) {
+            .mCustomScrollbar li img {
+                height: 32px;
+            }
+
+            .mCustomScrollbar li:last-child {
+                line-height: 32px;
+            }
+
+            .view-all-btn {
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+        }
+
+        .mCustomScrollbar li.active img {
+            opacity: 1;
+            border: 1px solid #0c8b95;
+        }
+
+        .mCustomScrollbar li:hover img {
+            opacity: 0.75;
+        }
+
+        .carousel-custom .carousel-outer {
+            position: relative;
+        }
+
+        /* .view-all-btn {
+            background-color: transparent;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            height: 94px;
+            margin-top: 10px;
+            width: auto;
+            line-height: 94px;
+            border: 1px solid #0c8b95;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: #0c8b95;
+            text-decoration: underline;
+            float: right;
+        } */
+
+        .view-all-btn {
+            background-color: transparent;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            height: calc(100% - 4px);
+            margin-top: 2px;
+            width: auto;
+            /* line-height: 94px; */
+            border: 1px solid #0c8b95;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: #0c8b95;
+            text-decoration: underline;
+            float: right;
+        }
+
+        /* end */
+
+        .ani {
+            opacity: 0;
+        }
+
+        @keyframes load {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .one {
+            -webkit-animation: load 1s .25s;
+            animation: load 1s 1 .25s;
+            animation-fill-mode: forwards;
+        }
+
+        .two {
+            -webkit-animation: load 1s .5s;
+            animation: load 1s 1 .5s;
+            animation-fill-mode: forwards;
+        }
+
+        .three {
+            -webkit-animation: load 1s .75s;
+            animation: load 1s 1 .75s;
+            animation-fill-mode: forwards;
+        }
+
+        .MultiCarousel {
+            float: left;
+            overflow: hidden;
+            padding: 15px;
+            width: 100%;
+            position: relative;
+        }
+
+        .MultiCarousel .MultiCarousel-inner {
+            transition: 1s ease all;
+            float: left;
+        }
+
+        .MultiCarousel .MultiCarousel-inner .item {
+            float: left;
+        }
+
+        .MultiCarousel .MultiCarousel-inner .item>div {
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            background: #f1f1f1;
+            color: #666;
+        }
+
+        .MultiCarousel .leftLst,
+        .MultiCarousel .rightLst {
+            position: absolute;
+            top: calc(50% - 20px);
+            background: #fff;
+            padding: 5px;
+            border: 1px solid #ebeef7;
+            box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
+        }
+
+        .MultiCarousel .leftLst {
+            left: 0;
+        }
+
+        .MultiCarousel .rightLst {
+            right: 0;
+        }
+
+        .MultiCarousel .leftLst.over,
+        .MultiCarousel .rightLst.over {
+            pointer-events: none;
+            background: #ccc;
+        }
+    </style>
+    <style type="text/css">
+        /* Chart.js */
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: .99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            animation: chartjs-render-animation 1ms
+        }
+
+        .chartjs-size-monitor,
+        .chartjs-size-monitor-expand,
+        .chartjs-size-monitor-shrink {
+            position: absolute;
+            direction: ltr;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: -1
+        }
+
+        .chartjs-size-monitor-expand>div {
+            position: absolute;
+            width: 1000000px;
+            height: 1000000px;
+            left: 0;
+            top: 0
+        }
+
+        .chartjs-size-monitor-shrink>div {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            left: 0;
+            top: 0
+        }
+    </style>
+
+    <style>
+        .input-group>label:first-child,
+        .wide-group>label:first-child {
+            width: 99%;
+            float: left;
+            padding: 0 0 0 6px;
+            color: #2B2B2B;
+            font-size: 16px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+        }
+
+        .upload-group {
+            width: 100% !important;
+            float: left;
+            padding: 0 16px;
+            border-radius: 8px;
+            background: #EAEAEA;
+            font-size: 18px;
+            outline: none;
+            box-sizing: border-box;
+            max-width: 446px;
+            position: relative;
+        }
+
+        .input-group div>div input {
+            width: 100% !important;
+        }
+
+        .input-group div input {
+            width: 100% !important;
+            float: left;
+            padding: 0 16px;
+            border: 1px solid #BEBEBE;
+            border-radius: 8px;
+            background: #FFFFFF;
+            font-size: 18px;
+            outline: none;
+            line-height: 48px;
+            box-sizing: border-box;
+            max-width: 446px;
+        }
+
+        .upload-box {
+            display: none !important;
+        }
+
+        .form-group label {
+            font-size: 16px;
+        }
+
+        .upload-group {
+            width: 100% !important;
+            float: left;
+            padding: 0 16px;
+            border-radius: 8px;
+            background: #EAEAEA;
+            font-size: 18px;
+            outline: none;
+            box-sizing: border-box;
+            max-width: 446px;
+            position: relative;
+            padding-top: 8px;
+        }
+
+        .upload-group span.labelTxt {
+            float: left;
+            color: #008D96;
+            font-size: 16px;
+            line-height: 28px;
+            overflow: hidden;
+            font-family: "DubaiW23-Regular", Helvetica, Arial, sans-serif;
+            padding: 5px 0;
+        }
+
+        .upload-group span.fa-upload::before {
+            font-size: 14px;
+            color: #008D96;
+            float: left;
+        }
+
+        [class*='icon-']:before {
+            display: inline-block;
+            font-family: 'Glyphter', 'Glyphter-2';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .upload-group span.fa-upload {
+            display: table;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-13px);
+            padding-top: 8px;
+        }
+
+        .input-group label span {
+            width: auto;
+            font-size: 18px;
+        }
+
+        .input-group div,
+        .alert-group div {
+            width: 100%;
+            float: left;
+        }
+
+        .upload-group.uploaded {
+            background: #008D96;
+        }
+
+        .upload-group.uploaded span.labelTxt {
+            color: #ffffff;
+        }
+
+        .upload-group.uploaded span.fa-trash {
+            display: table;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-13px);
+            padding-top: 8px;
+        }
+
+        span.fa.fa-trash {
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-light navbar-expand-md  justify-content-center fixed-top">
+            <a class="navbar-brand ml1" href="index.html"><img src="../images/dha-logo.png" alt="Logo"
+                    style="width:190px;"></a><a class="menu-btn active" href="#"
+                id="toggle-btnmenu"><span></span><span></span><span></span></a>
+            <div class="navbar-collapse justify-content-between align-items-center w-100" id="collapsingNavbar1">
+                <div class="navbar-nav mx-auto text-center">
+                    <div class="form-group has-search "><span class="fa fa-search form-control-feedback"></span><input
+                            type="text" class="form-control" placeholder="Search for web content ,users and websites">
+                    </div>
+                    <div class="bell-wrapper align-self-start  ">
+                        <a id="noti" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" class="nav-link">
+                            <i class="fa fa-bell"></i><span class="noti"></span></a>
+                        <ul aria-labelledby="noti" class="noti-size dropdown-menu">
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-sm-1 align-self-center text-center"><img
+                                                src="../images/placeholder-100x100.jpg" alt="AppName">
+                                        </div>
+                                        <div class="col-sm-11 text-left  ">
+
+                                            <div class="row   text-left  "><span class="">A crowd walks on a Dubai
+                                                    Street walks on a Dubai Street. .. </span></div>
+                                            <div class="row   text-left  ">
+                                                <div class="col-md-8 col-sm-6 text-left "><small>By Marketing</small>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 text-right "><small>Read More</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap user-menu">
+
+
+                    <li class="nav-item dropdown d-flex align-items-right">
+                        <a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" class="nav-link"><img src="../images/user_avatar.png" alt="..."
+                                class="avatar rounded-circle">Tamer Shaaban</a>
+
+                        <ul aria-labelledby="user" class="user-size dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Administration</a></li>
+                            <li><a href="#" class="dropdown-item">Edit Profile </a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="#" class="dropdown-item">Logout </a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-menu">
+
+        <nav class="navbar navbar-expand-md navbar-light justify-content-center">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#collapsingNavbar2" aria-controls="collapsingNavbar2" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse justify-content-between align-items-center w-100 collapse"
+                id="collapsingNavbar2">
+                <ul class="navbar-nav text-left main-menu-sec">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About DHA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Applications</a>
+                        <ul class="submenu">
+                            <li class="nav-item active"><a href="about.html" class="submenu-head nav-link">Corporate</a>
+                                <div class="row submenu-list">
+                                    <div class="col-sm-12">
+                                        <ul>
+                                            <li><a href="#">GRP</a></li>
+                                            <li><a href="#">Auction Status</a></li>
+                                            <li><a href="#">Time Attendance Scheduling (new)</a></li>
+                                            <li><a href="#">ARIS</a></li>
+                                            <li><a href="#">eJob Administration</a></li>
+                                            <li><a href="#">File Tracking System - Purchasing Department</a></li>
+                                            <li><a href="#">Search MIS Reports</a></li>
+                                            <li><a href="#">DHA ECM</a></li>
+                                            <li><a href="#">FileNet</a></li>
+                                            <li><a href="#">Enterprise Performance Management (Thermometer)</a></li>
+                                            <li><a href="#">GMC System</a></li>
+                                            <li><a href="#">BI Dashboards</a></li>
+                                            <li><a href="#">HR Search</a></li>
+                                            <li><a href="#">Tejari SOQ</a></li>
+                                            <li><a href="#">Microsoft Dynamics CRM 2015</a></li>
+                                            <li><a href="#">e-Follow Up</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="about.html" class="submenu-head nav-link">Communication</a>
+                                <div class="row submenu-list">
+                                    <div class="col-sm-12">
+                                        <ul>
+                                            <li><a href="#">Correspondance & Tracking System</a></li>
+                                            <li><a href="#">eDirectory</a></li>
+                                            <li><a href="#">Announcement System</a></li>
+                                            <li><a href="#">eComplain</a></li>
+                                            <li><a href="#">eDirectory</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="about.html" class="submenu-head nav-link">IT</a>
+                                <div class="row submenu-list">
+                                    <div class="col-sm-12">
+                                        <ul>
+                                            <li><a href="#">LanDesk Service Desk</a></li>
+                                            <li><a href="#">Enterprise Project Management</a></li>
+                                            <li><a href="#">IT Services</a></li>
+                                            <li><a href="#">IT Self Service Request</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="about.html" class="submenu-head nav-link">Specialized
+                                    System</a>
+                                <div class="row submenu-list">
+                                    <div class="col-sm-12">
+                                        <ul>
+                                            <li><a href="#">Engineering Maintenance System</a></li>
+                                            <li><a href="#">Medical Fitness System</a></li>
+                                            <li><a href="#">Legal Affairs System</a></li>
+                                            <li><a href="#">ICIS View</a></li>
+                                            <li><a href="#">Sheryan</a></li>
+                                            <li><a href="#">Trauma Center PACS Web Access</a></li>
+                                            <li><a href="#">MASAR(DRTP)</a></li>
+                                            <li><a href="#">Medical Research</a></li>
+                                            <li><a href="#">eTrauma</a></li>
+                                            <li><a href="#">k2 Medical Training System</a></li>
+                                            <li><a href="#">Overseas Service</a></li>
+                                            <li><a href="#">Thalassemia System</a></li>
+                                            <li><a href="#">AMAN System</a></li>
+                                            <li><a href="#">Mortality & Morbidity System</a></li>
+                                            <li><a href="#">Blood Donation</a></li>
+                                            <li><a href="#">Dietary System</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="about.html" class="submenu-head nav-link">Statistics</a>
+                                <div class="row submenu-list">
+                                    <div class="col-sm-12">
+                                        <ul>
+                                            <li><a href="#">Birth and Death Notification Administration</a></li>
+                                            <li><a href="#">Statistics System Administration</a></li>
+                                            <li><a href="#">Infectious Disease Notification System</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="policies.html">Policies</a></li>
+                </ul>
+                <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap right-side-menu">
+
+                    <li class="nav-item"><a class="nav-link" href="guide.html">Employee Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inner.html">Code of Conduct <span
+                                class="noti-ii">!</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="inner.html" data-toggle="tooltip"
+                            data-placement="bottom" title="Phone Directory"><i
+                                class="fa fa-volume-control-phone mr-1"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="inner.html" data-toggle="tooltip"
+                            data-placement="bottom" title="Phone Directory"><i class="fa fa-book mr-1 mr-1"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-toggle="tooltip" data-placement="bottom"
+                            title="Weather Forecasting"><img class="weather-icon" src="../images/cloud-sun.png" alt=""></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="prayer.html" data-toggle="tooltip" data-placement="bottom"
+                            data-html="true"
+                            title="<strong>Prayer Times</strong> <br>  Fajr 05:00am<br>  Dohr 12:00pm <br>  Fajr 05:00am<br>  Dohr 12:00pm"><img
+                                class="prayer-icon" src="../images/prayer-icon.png" alt=""></a>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="indexar.html">عربي</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- :::::::::::::::::::::::::::::: SIDEBAR ::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    <div class="page-content d-flex align-items-stretch">
+        <div>
+            <ul class="km-sidenav h-100">
+                <li class="km-nav-item"><a class="km-nav-link active " href="../index.html">
+                        <img src="../images/Dashboard.png" alt="dashboard icon">
+                        <span class="menu-title">Home</span>
+                    </a>
+                </li>
+
+                <li class="km-nav-item"><a class="km-nav-link active " href="#"><img src="../images/setting-icon.png" width="50" height="50" alt=""></i><span
+                            class="menu-title">Manage</span>
+                    </a>
+                    <ul class="side-sub-menu">
+                        <p class="side-sub-menu-title">Specialty</p>
+                        <li><a href="../part-2-facility/new-specility.html">Create Specialty</a></li>
+                        <li><a href="../part-2-facility/view-all-specility.html">Manage Specialty</a></li>
+                        <p class="side-sub-menu-title">Facility</p>
+                        <li><a href="../part-2-facility/new-facility.html">Create Facility</a></li>
+                        <li><a href="../part-2-facility/view-all-facility.html">Manage Facility</a></li>
+                        <p class="side-sub-menu-title">Provider</p>
+                        <li><a href="../new-provider.html">Create Provider</a></li>
+                        <li><a href="../manage-provider.html">Manage Provider</a></li>
+                    </ul>
+                </li>
+
+                <li class="km-nav-item"><a class="km-nav-link active " href="#"><img src="../images/search-icon.png" alt="Search Icon" ><span
+                            class="menu-title">Search</span>
+                    </a>
+                    <ul class="side-sub-menu">
+                        <li><a href="./search-privilage-by-provider.html">Search by Provider</a></li>
+                        <li><a href="./search-privilage-by-facility.html">Search by Facility</a></li>
+                        <li><a href="./search-privilage-by-specility.html">Search by Specialty</a></li>
+                        <li><a href="./search-privilage-by-privilage.html">Search by Privilege</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ::::::::::::::::::::::::::: TITLE AND NAVIGATION :::::::::::::::::::::::::::::::::::::; -->
+        <div class="content-inner active">
+            <div class="container-fluid head-bar pb-0">
+                <div class="row">
+                    <h3>Privilege Management</h3>
+                </div>
+                <div class="row">
+                    <div class="d-flex justify-content-end align-items-end">
+                        <ul class="breadcrumb align-items-right">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Home</i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">Privilege Management</a></li>
+                            <li class="breadcrumb-item active">View all Privilege</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-container">
+            <h2 class="secondary-color mb-3">Search</h2>
+
+            <h3>Total  <span class="text-success">130</span class="text-success"> Facilities</h3>
+
+            <form class="w-25 my-3">
+                <input class="form-control p-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
+            <div class="d-flex align-items-center bg-white filter-menu mt-4 w-50">
+                <h4 class="mt-4 mr-3">FILTER:</h4>
+                <div>
+                    <label class="mb-0" for="pyhsician-type">Facility</label>
+                    <select class="form-control form-control-lg filter-dropdown " id="pyhsician-type" placeholder="Select">
+                        <option disabled selected>Select</option>
+                        <option>Anesthesia</option>
+                        <option>Cardio</option>
+                        <option>Other</option>
+                    </select>
+                   </div>
+            </div>
+
+              <div>
+                <ul class="responsive-table">
+                  <li class="table-header row">
+                    <div class="col">Facility Id</div>
+                    <div class="col">Facility Name</div>
+                    <div class="col mx-auto">Actions</div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                  <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Job Id">124435</div>
+                    <div class="col" data-label="Customer Name">Dubai Hospital</div>
+                    <div class="col">
+                        <a href="./search-privilage-by-facility-details.html" class="col action-btn" data-label="Payment Status">View Providers</a>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="mt-5">
+              <div class="dataTables_length" id="medicalDirectoryFacilities-table_length">
+                  <label>Items per page: <select name="medicalDirectoryFacilities-table_length"
+                          aria-controls="medicalDirectoryFacilities-table" class="">
+                          <option value="10">10</option>
+                          <option value="25">25</option>
+                          <option value="50">50</option>
+                          <option value="100">100</option>
+                      </select></label></div>
+              <div class="dataTables_info" id="medicalDirectoryFacilities-table_info"
+                  role="status" aria-live="polite">1 - 3 of 3 items</div>
+              <div class="dataTables_paginate paging_full_numbers"
+                  id="medicalDirectoryFacilities-table_paginate">
+                  <a class="paginate_button first  "
+                      aria-controls="medicalDirectoryFacilities-table" data-dt-idx="0"
+                      tabindex="0" id="medicalDirectoryFacilities-table_first">First</a>
+                  <a class="paginate_button previous  "
+                      aria-controls="medicalDirectoryFacilities-table" data-dt-idx="1"
+                      tabindex="0" id="medicalDirectoryFacilities-table_previous">Previous</a>
+                  <span><a class="paginate_button current"
+                          aria-controls="medicalDirectoryFacilities-table" data-dt-idx="2"
+                          tabindex="0">1</a></span>
+                  <a class="paginate_button next  "
+                      aria-controls="medicalDirectoryFacilities-table" data-dt-idx="3"
+                      tabindex="0" id="medicalDirectoryFacilities-table_next">Next</a>
+                  <a class="paginate_button last  "
+                      aria-controls="medicalDirectoryFacilities-table" data-dt-idx="4"
+                      tabindex="0" id="medicalDirectoryFacilities-table_last">Last</a>
+              </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <a href="# " class="back-to-top " style="display: block; "><span style="outline: none; ">scroll to top</span><i
+            class="icon-keyboard_tab "></i></a>
+    <a href="# " class="chat-btn " style="display: block; "><span style="outline: none; "><i
+                class="fa fa-comments-o "></i><span class="chatbtnmsg ">Chat</span></span></a>
+    <script src="../js/jquery.min.js "></script>
+    <script src="../s/popper.min.js "></script>
+    <script src="../js/bootstrap.min.js "></script>
+    <script src="../js/slick.min.js "></script>
+    <script src="../js/jquery-ui.min.js "></script>
+    <script src="../js/main.min.js "></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip "]').tooltip();
+        })
+    </script>
+    <script src="../js/dashboard.js "></script>
+</body>
+
+</html>
