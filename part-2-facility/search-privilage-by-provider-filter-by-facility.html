@@ -921,104 +921,150 @@
 
             <div class="main-container">
             <h2 class="secondary-color mb-3">Search</h2>
+            <h2>Total <span class="text-success">63</span> Providers</h2>
 
-            <h3>Total  <span class="text-success">130</span class="text-success"> Specialties</h3>
+            <form>
+                <div class="w-25 my-3">
+                    <input class="form-control p-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
 
-            <form class="w-25 my-3">
-                <input class="form-control p-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <div class="d-flex align-items-center bg-white filter-menu mt-4 w-50">
-                <h4 class="mt-4 mr-3">FILTER:</h4>
-                <div>
-                    <label class="mb-0" for="pyhsician-type">Specialty</label>
-                    <select class="form-control form-control-lg filter-dropdown " id="pyhsician-type" placeholder="Select">
-                        <option disabled selected>Select</option>
-                        <option>All</option>
-                        <option>Anesthesia</option>
-                        <option>Cardio</option>
-                        <option>Other</option>
-                    </select>
-                   </div>
-                   <Button class="btn-primary-fill px-5" style="margin: 26px auto auto">Export</Button>
-            </div>
+                <div class="d-flex justify-content-between align-items-center w-50 filter-menu">
+                    <div class="form-group d-flex align-items-center">
+                        <h4 class="mt-3 mr-2">FILTER:</h4>
+                        <div class="form-group">
+                            <label class="mb-0" for="pyhsician-type">Specialty</label>
+                            <select class="form-control form-control-lg  filter-dropdown" id="pyhsician-type" placeholder="Select">
+                                <option disabled selected>Select</option>
+                                <option>Anesthesia</option>
+                                <option>Cardio</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary-fill px-5 py-2">Filter</a>
+                        <button class="btn-primary-outline px-5 py-2">Reset</button>
+                </div>
+              </form>
 
               <div>
                 <ul class="responsive-table">
                   <li class="table-header row">
-                    <div class="col">Specialty Id</div>
-                    <div class="col">Specialty Name</div>
+                      <div class="col">Provider Id</div>
+                    <div class="col">Provider Name *</div>
+                    <div class="col">Designation</div>
+                    <div class="col">Resident type</div>
                     <div class="col mx-auto">Actions</div>
+                    <div class="col"></div>
                   </li>
                   <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
+                      <div class="col" data-label="Customer Name">12232342</div>
+                    <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                    <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                    <div class="col" data-label="Amount">Resident</div>
                     <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
+                        <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                    </div>
+                    <div class="col">
+                        <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
                     </div>
                   </li>
                   <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
-                  <li class="table-row d-flex align-items-center row">
-                    <div class="col" data-label="Job Id">124435</div>
-                    <div class="col" data-label="Customer Name">Anesthesia</div>
-                    <div class="col">
-                        <a href="./search-privilage-by-facility.html" class="col action-btn" data-label="Payment Status">View Facilities</a>
-                    </div>
-                  </li>
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                <li class="table-row d-flex align-items-center row">
+                    <div class="col" data-label="Customer Name">12232342</div>
+                  <div class="col" data-label="Job Id">Ahamd saeed khan</div>
+                  <div class="col" data-label="Customer Name">Chief Surgeon</div>
+                  <div class="col" data-label="Amount">Resident</div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col action-btn" data-label="Payment Status">View Details</a>
+                  </div>
+                  <div class="col">
+                      <a href="./search-privilage-by-provider-detail.html" class="col btn p-0" data-label="Payment Status"><u>View Profile</u></a>
+                  </div>
+                </li>
+                
                 </ul>
             </div>
             <div class="mt-5">
